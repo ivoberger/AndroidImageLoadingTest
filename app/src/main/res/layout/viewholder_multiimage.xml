@@ -6,11 +6,38 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView_multiImageViewHolder_first"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:id="@+id/imageView_multiImageViewHolder_1"
+        android:layout_width="@dimen/imageSize_large"
+        android:layout_height="@dimen/imageSize_large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView_multiImageViewHolder_2"
+        android:layout_width="@dimen/imageSize_medium"
+        android:layout_height="@dimen/imageSize_medium"
+        app:layout_constraintStart_toEndOf="@id/imageView_multiImageViewHolder_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView_multiImageViewHolder_3"
+        android:layout_width="@dimen/imageSize_small"
+        android:layout_height="@dimen/imageSize_small"
+        app:layout_constraintStart_toEndOf="@id/imageView_multiImageViewHolder_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView_multiImageViewHolder_4"
+        android:layout_width="@dimen/imageSize_tiny"
+        android:layout_height="@dimen/imageSize_tiny"
+        app:layout_constraintStart_toEndOf="@id/imageView_multiImageViewHolder_3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
