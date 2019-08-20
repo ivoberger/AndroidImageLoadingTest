@@ -20,10 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerView_main_imageList.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = ImagePyramidAdapter(100)
-        }
+        loadImageGrid()
     }
 
     private fun loadImageGrid() = recyclerView_main_imageList.apply {
