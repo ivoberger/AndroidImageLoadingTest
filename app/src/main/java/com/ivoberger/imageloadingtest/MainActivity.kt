@@ -12,9 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         recyclerView_main_imageList.apply {
-            //            layoutManager = GridLayoutManager(this@MainActivity, 3)
             layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = MultiImageAdapter(100)
+            adapter = ImagePyramidAdapter(100)
         }
     }
 }
