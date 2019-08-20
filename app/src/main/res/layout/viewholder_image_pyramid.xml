@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/imageView_imagePyramidViewHolder_1"
         android:layout_width="@dimen/imageSize_large"
         android:layout_height="@dimen/imageSize_large"
@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <ImageView
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/imageView_imagePyramidViewHolder_2"
         android:layout_width="@dimen/imageSize_medium"
         android:layout_height="@dimen/imageSize_medium"
@@ -23,7 +23,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <ImageView
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/imageView_imagePyramidViewHolder_3"
         android:layout_width="@dimen/imageSize_small"
         android:layout_height="@dimen/imageSize_small"
@@ -32,7 +32,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <ImageView
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/imageView_imagePyramidViewHolder_4"
         android:layout_width="@dimen/imageSize_tiny"
         android:layout_height="@dimen/imageSize_tiny"

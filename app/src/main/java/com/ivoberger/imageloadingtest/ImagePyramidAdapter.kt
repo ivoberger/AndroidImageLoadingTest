@@ -3,7 +3,7 @@ package com.ivoberger.imageloadingtest
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import com.facebook.drawee.view.SimpleDraweeView
 
 class ImagePyramidAdapter(itemCount: Int) :
     BaseAdapter<ImagePyramidAdapter.ViewHolder>(itemCount) {
@@ -18,14 +18,14 @@ class ImagePyramidAdapter(itemCount: Int) :
     class ViewHolder(itemView: View) : BaseViewHolder(itemView) {
         override fun onBind(position: Int) {
             val imgUrl = "https://picsum.photos/id/${position * 2}/500"
-            val imageViews = listOf<ImageView>(
+            val imageViews = listOf<SimpleDraweeView>(
                 itemView.findViewById(R.id.imageView_imagePyramidViewHolder_1),
                 itemView.findViewById(R.id.imageView_imagePyramidViewHolder_2),
                 itemView.findViewById(R.id.imageView_imagePyramidViewHolder_3),
                 itemView.findViewById(R.id.imageView_imagePyramidViewHolder_4)
             )
             imageViews.forEach { imageView ->
-                // TODO load image into image views
+                imageView.setImageURI(imgUrl)
             }
         }
 
