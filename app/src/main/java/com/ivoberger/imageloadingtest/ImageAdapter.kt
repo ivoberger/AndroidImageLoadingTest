@@ -14,7 +14,7 @@ class ImageAdapter(itemCount: Int) : BaseAdapter<ImageAdapter.ViewHolder>(itemCo
         override fun onBind(position: Int) {
             val imgUrl = "https://picsum.photos/id/${position * 2}/500"
             Glide.with(itemView).load(imgUrl)
-                .into(itemView.findViewById(R.id.imageView_basicViewHolder))
+                .into(itemView.findViewById(R.id.imageView_imageViewHolder))
         }
 
     }
