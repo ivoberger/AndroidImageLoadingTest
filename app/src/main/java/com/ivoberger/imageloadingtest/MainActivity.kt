@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView_main_imageList.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
+            // layoutManager = GridLayoutManager(this@MainActivity, 3)
             adapter = ImagePyramidAdapter(100)
         }
     }

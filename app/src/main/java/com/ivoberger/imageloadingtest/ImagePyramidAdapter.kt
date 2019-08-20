@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.bumptech.glide.Glide
+import com.squareup.picasso.Picasso
 
 class ImagePyramidAdapter(itemCount: Int) :
     BaseAdapter<ImagePyramidAdapter.ViewHolder>(itemCount) {
@@ -26,7 +26,7 @@ class ImagePyramidAdapter(itemCount: Int) :
                 itemView.findViewById(R.id.imageView_multiImageViewHolder_4)
             )
             imageViews.forEach { imageView ->
-                Glide.with(itemView).load(imgUrl).into(imageView)
+                Picasso.get().load(imgUrl).into(imageView)
             }
         }
 
