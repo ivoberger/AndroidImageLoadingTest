@@ -3,6 +3,8 @@ package com.ivoberger.imageloadingtest
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import coil.api.load
 
 class ImagePyramidAdapter(itemCount: Int) :
     BaseAdapter<ImagePyramidAdapter.ViewHolder>(itemCount) {
@@ -17,7 +19,10 @@ class ImagePyramidAdapter(itemCount: Int) :
     class ViewHolder(itemView: View) : BaseViewHolder(itemView) {
         override fun onBind(position: Int) {
             val imgUrl = "https://picsum.photos/id/${position * 2}/500"
-            // TODO load image into image views
+            itemView.findViewById<ImageView>(R.id.imageView_multiImageViewHolder_1).load(imgUrl)
+            itemView.findViewById<ImageView>(R.id.imageView_multiImageViewHolder_2).load(imgUrl)
+            itemView.findViewById<ImageView>(R.id.imageView_multiImageViewHolder_3).load(imgUrl)
+            itemView.findViewById<ImageView>(R.id.imageView_multiImageViewHolder_4).load(imgUrl)
         }
 
     }
