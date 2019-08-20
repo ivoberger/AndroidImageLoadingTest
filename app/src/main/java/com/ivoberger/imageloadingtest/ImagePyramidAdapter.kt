@@ -19,10 +19,15 @@ class ImagePyramidAdapter(itemCount: Int) :
     class ViewHolder(itemView: View) : BaseViewHolder(itemView) {
         override fun onBind(position: Int) {
             val imgUrl = "https://picsum.photos/id/${position * 2}/500"
-            itemView.findViewById<ImageView>(R.id.imageView_multiImageViewHolder_1).load(imgUrl)
-            itemView.findViewById<ImageView>(R.id.imageView_multiImageViewHolder_2).load(imgUrl)
-            itemView.findViewById<ImageView>(R.id.imageView_multiImageViewHolder_3).load(imgUrl)
-            itemView.findViewById<ImageView>(R.id.imageView_multiImageViewHolder_4).load(imgUrl)
+            val imageViews = listOf<ImageView>(
+                itemView.findViewById(R.id.imageView_multiImageViewHolder_1),
+                itemView.findViewById(R.id.imageView_multiImageViewHolder_2),
+                itemView.findViewById(R.id.imageView_multiImageViewHolder_3),
+                itemView.findViewById(R.id.imageView_multiImageViewHolder_4)
+            )
+            imageViews.forEach { imageView ->
+                imageView.load(imgUrl)
+            }
         }
 
     }
