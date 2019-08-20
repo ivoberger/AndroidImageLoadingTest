@@ -14,7 +14,7 @@ class ImageAdapter(itemCount: Int) : BaseAdapter<ImageAdapter.ViewHolder>(itemCo
     class ViewHolder(itemView: View) : BaseViewHolder(itemView) {
         override fun onBind(position: Int) {
             val imgUrl = "https://picsum.photos/id/${position * 2}/500"
-            itemView.findViewById<ImageView>(R.id.imageView_basicViewHolder).load(imgUrl)
+            itemView.findViewById<ImageView>(R.id.imageView_imageViewHolder).load(imgUrl)
         }
 
     }
