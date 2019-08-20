@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView_basicViewHolder"
+        android:id="@+id/imageView_imageViewHolder"
         android:layout_width="match_parent"
         android:layout_height="@dimen/imageSize_large"
         tools:srcCompat="@tools:sample/avatars" />
