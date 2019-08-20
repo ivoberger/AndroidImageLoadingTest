@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import com.bumptech.glide.Glide
 
 class ImagePyramidAdapter(itemCount: Int) :
     BaseAdapter<ImagePyramidAdapter.ViewHolder>(itemCount) {
@@ -25,7 +26,7 @@ class ImagePyramidAdapter(itemCount: Int) :
                 itemView.findViewById(R.id.imageView_multiImageViewHolder_4)
             )
             imageViews.forEach { imageView ->
-                // TODO load image into image views
+                Glide.with(itemView).load(imgUrl).into(imageView)
             }
         }
 
